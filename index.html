@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Button Test</title>
-</head>
+    <title>Simple Multi-Digit Input Test</title>
+    </head>
 <body>
 
-    <button>Click Me</button> 
+    <div class="otp-container">
+        <h1>Enter 4-Digit OTP</h1>
+        <form action="/submit-otp-endpoint" method="post">
+            <div class="otp-inputs">
+                <input type="text" name="digit1" maxlength="1" inputmode="numeric" style="width: 30px;">
+                <input type="text" name="digit2" maxlength="1" inputmode="numeric" style="width: 30px;">
+                <input type="text" name="digit3" maxlength="1" inputmode="numeric" style="width: 30px;">
+                <input type="text" name="digit4" maxlength="1" inputmode="numeric" style="width: 30px;">
+            </div>
+            <br>
+            <button type="submit">Verify Code</button>
+        </form>
+    </div>
 
-</body>
+    </body>
 </html>
