@@ -1,0 +1,133 @@
+/* Basic Reset & Body Styling */
+body {
+    font-family: 'Google Sans', 'Roboto', Arial, sans-serif; /* Prioritize Google's fonts */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top, not center vertically */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f8f8f8; /* Light background */
+    padding-top: 50px; /* Space from the top edge */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* Container for the verification card */
+.verification-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    width: 100%;
+    max-width: 400px; /* Max width to fit mobile screen aesthetic */
+    text-align: left;
+    position: relative; /* For positioning the close button */
+}
+
+/* Close button styling */
+.close-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #5f6368; /* Google's common icon color */
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Heading styling */
+h1 {
+    font-size: 24px;
+    font-weight: 500; /* Medium weight, typical for Google headings */
+    color: #202124; /* Darker text */
+    margin-top: 40px; /* Space from the close button */
+    margin-bottom: 10px;
+}
+
+/* Description paragraph styling */
+.description {
+    font-size: 14px;
+    color: #5f6368; /* Muted text color */
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.description .email {
+    font-weight: bold;
+    color: #202124; /* Make email stand out slightly */
+}
+
+/* OTP input fields container */
+.otp-inputs {
+    display: flex;
+    justify-content: flex-start; /* Align inputs to the left */
+    gap: 8px; /* Space between input boxes */
+    margin-bottom: 30px;
+}
+
+/* Individual OTP input field styling */
+.otp-input {
+    width: 38px; /* Width of each box */
+    height: 40px; /* Height of each box */
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #dadce0; /* Light gray border, typical for Google inputs */
+    border-radius: 4px; /* Slightly rounded corners */
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    -moz-appearance: textfield; /* Remove spinner buttons in Firefox */
+}
+
+/* Remove up/down arrows for number input */
+.otp-input::-webkit-outer-spin-button,
+.otp-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.otp-input:focus {
+    border-color: #1a73e8; /* Blue border on focus, typical for Google */
+    box-shadow: 0 0 0 1px #1a73e8; /* Subtle blue glow */
+}
+
+/* Resend link styling */
+.resend-link {
+    font-size: 14px;
+    color: #5f6368;
+    margin-top: 30px; /* Space from OTP inputs */
+}
+
+.resend-link a {
+    color: #1a73e8; /* Google's blue link color */
+    text-decoration: none;
+    font-weight: 500; /* Slightly bolder link */
+}
+
+.resend-link a:hover {
+    text-decoration: underline;
+}
+
+/* Basic mobile responsiveness */
+@media (max-width: 450px) {
+    body {
+        padding-top: 20px;
+    }
+    .verification-card {
+        margin: 0 15px; /* Add some side margin on smaller screens */
+        padding: 20px;
+        box-shadow: none; /* Remove shadow on very small screens for cleaner look */
+    }
+    h1 {
+        font-size: 22px;
+    }
+    .otp-inputs {
+        justify-content: space-between; /* Distribute inputs better on small screens */
+        gap: 5px;
+    }
+    .otp-input {
+        width: 35px;
+        height: 38px;
+        font-size: 18px;
+    }
+}
