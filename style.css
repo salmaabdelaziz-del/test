@@ -53,11 +53,6 @@ h1 {
     margin-bottom: 30px;
 }
 
-.description .email {
-    font-weight: bold;
-    color: #202124; /* Make email stand out slightly */
-}
-
 /* OTP input fields container */
 .otp-inputs {
     display: flex;
